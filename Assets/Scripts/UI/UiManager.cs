@@ -19,10 +19,11 @@ public class UiManager : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
         SoundManager.instance.PlaySound(gameOverSound);
-         
+        Time.timeScale = 0;
     }
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
 
     public void MainMenu()

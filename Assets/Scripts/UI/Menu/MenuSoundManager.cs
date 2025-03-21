@@ -1,4 +1,6 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static Unity.VisualScripting.Member;
 
 public class MenuSoundManager : MonoBehaviour
@@ -6,6 +8,7 @@ public class MenuSoundManager : MonoBehaviour
     public static MenuSoundManager instance { get; private set; }
     private AudioSource source;
     private AudioSource musicSource;
+    private bool hasBounds = true;
     private void Awake()
     {
         if (instance == null)
@@ -13,7 +16,10 @@ public class MenuSoundManager : MonoBehaviour
         else
             Destroy(gameObject);
         source = GetComponent<AudioSource>();
-        musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+        if(hasBounds )
+            musicSource = transform.GetChild(0).GetComponent<AudioSource>();
+        else
+            musicSource = transform.GetComponent<AudioSource>();
         ChangeMusicVolume(0);
         ChangeSoundVolume(0);
     }

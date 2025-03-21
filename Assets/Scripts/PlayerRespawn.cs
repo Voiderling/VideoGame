@@ -43,4 +43,8 @@ public class PlayerRespawn : MonoBehaviour
             collision.GetComponent<SpriteRenderer>().color = Color.green;
         }
     }
+    public int GetRespawnCounter()
+    {
+        return maxDeaths - deathCounter;
+    }
 }

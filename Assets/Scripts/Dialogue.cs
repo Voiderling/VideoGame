@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
@@ -13,13 +15,13 @@ public class Dialogue : MonoBehaviour
     [TextArea]
     [SerializeField] private string[] dialogueWords;
     [SerializeField] private Sprite[] portrait;
-
     private bool dialogueActivated;
     [SerializeField] private int step;
+    [SerializeField] private GameObject speakPrompt;
     private bool inConversation;
-
     private void Start()
     {
+        speakPrompt.SetActive(false); // Initialize speak prompt as hidden
         dialogueCanvas.SetActive(false);
     }
 
@@ -33,6 +35,7 @@ public class Dialogue : MonoBehaviour
                 inConversation = true;
                 dialogueCanvas.SetActive(true);
                 ShowNextLine();
+                speakPrompt.SetActive(false);
             }
             else
             {
@@ -41,7 +44,6 @@ public class Dialogue : MonoBehaviour
             }
         }
     }
-
     private void ShowNextLine()
     {
         if (step >= speaker.Length)
@@ -50,7 +52,8 @@ public class Dialogue : MonoBehaviour
             dialogueCanvas.SetActive(false);
             step = 0;
             inConversation = false;
-            return;
+            StartCoroutine(changeScene());
+            SceneManager.LoadScene(PlayerPrefs.GetInt("level3", 4));
         }
 
         // Show current line
@@ -65,6 +68,7 @@ public class Dialogue : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             dialogueActivated = true;
+            speakPrompt.SetActive(true); // Show prompt when entering
             step = 0; // Reset dialogue when entering trigger
         }
     }
@@ -75,8 +79,14 @@ public class Dialogue : MonoBehaviour
         {
             dialogueActivated = false;
             inConversation = false;
+            if (dialogueCanvas != null)
             dialogueCanvas.SetActive(false);
+            speakPrompt.SetActive(false); // Hide prompt when leaving
             step = 0; // Reset progress when leaving
         }
+    }
+    private IEnumerator changeScene()
+    {
+        yield return new WaitForSeconds(2);
     }
 }

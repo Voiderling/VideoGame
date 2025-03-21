@@ -10,7 +10,7 @@ public class EnhancedSkeleton : MonoBehaviour
     private float cooldownTimer = Mathf.Infinity;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
-    [SerializeField] private bool enableChase;
+    [SerializeField] private bool enableChase = true;
     private Animator anim;
     private Health playerHealth;
     private HeroKnight knight;
@@ -20,6 +20,7 @@ public class EnhancedSkeleton : MonoBehaviour
     [SerializeField] private float chaseSpeed = 2.5f;
     [SerializeField] private float chaseDistance = 7f;
     [SerializeField] private float stoppingDistance = 1.5f;
+    [SerializeField] private float maxVerticalDistance = 1f; // Maximum Y distance to detect player
     private Transform player;
     [Header("Attack Sound")]
     [SerializeField] private AudioClip attackSound;
@@ -41,6 +42,10 @@ public class EnhancedSkeleton : MonoBehaviour
         previousHealth = enemy.currentHealth;
         knight = GetComponent<HeroKnight>();
     }
+    private void Start()
+    {
+        enableChase = true;
+    }
 
     private void Update()
     {
@@ -58,18 +63,38 @@ public class EnhancedSkeleton : MonoBehaviour
     {
         cooldownTimer += Time.deltaTime;
         if (enemy.IsDead()) return;
-        if (PlayerInSight())
+
+        // Debug statement to help diagnose the issue
+        if (player != null)
         {
+            Debug.Log($"Player distance: {Vector2.Distance(transform.position, player.position)}, " +
+                      $"On same level: {IsPlayerOnSameLevel()}, " +
+                      $"Chase enabled: {enableChase}");
+        }
+
+        // Check if player is nearby (in front OR behind)
+        if (PlayerInSight() || PlayerBehind())
+        {
+            Debug.Log("Player in attack range!");
             HandleAttackState();
         }
+        // Then check for chase, but only on same vertical level
         else if (ShouldChasePlayer())
         {
+            Debug.Log("Should chase player!");
             HandleChaseState();
         }
         else
         {
             HandlePatrolState();
         }
+    }
+
+    private bool IsPlayerOnSameLevel()
+    {
+        if (player == null) return false;
+        float yDifference = Mathf.Abs(transform.position.y - player.position.y);
+        return yDifference <= maxVerticalDistance;
     }
 
     private void HandleAttackState()
@@ -86,10 +111,12 @@ public class EnhancedSkeleton : MonoBehaviour
 
     private void HandlePatrolState()
     {
-        if (!IsPlayerInChaseRange() && !isPlayerInCombatRange)
+        // Only resume patrol if player is outside horizontal range or not on attack state
+        if (!isPlayerInCombatRange && !PlayerInSight() && !PlayerBehind())
             enemyPatrol.enabled = true;
     }
 
+    // Check for player in front with boxcast
     private bool PlayerInSight()
     {
         RaycastHit2D hit = Physics2D.BoxCast(
@@ -103,32 +130,74 @@ public class EnhancedSkeleton : MonoBehaviour
         return hit.collider != null;
     }
 
-    private bool ShouldChasePlayer()
+    // NEW: Check for player behind the enemy
+    private bool PlayerBehind()
     {
         if (player == null) return false;
-        return IsPlayerInChaseRange() && !PlayerInSight();
+
+        // Check if player is behind based on enemy's facing
+        bool playerIsBehind = (transform.localScale.x > 0 && player.position.x < transform.position.x) ||
+                             (transform.localScale.x < 0 && player.position.x > transform.position.x);
+
+        // Only detect if close enough
+        float xDistance = Mathf.Abs(transform.position.x - player.position.x);
+        float yDifference = Mathf.Abs(transform.position.y - player.position.y);
+
+        // Player must be close behind AND on same level
+        if (playerIsBehind && xDistance <= range && yDifference <= maxVerticalDistance)
+        {
+            // Get player's health component if we detect them
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                playerHealth = playerObj.GetComponent<Health>();
+
+            return true;
+        }
+
+        return false;
     }
 
-    private bool IsPlayerInChaseRange()
+    private bool ShouldChasePlayer()
     {
-        return Vector2.Distance(transform.position, player.position) <= chaseDistance;
+        if (!enableChase || player == null) return false;
+
+        // Simplify chase detection - just use direct distance
+        float distance = Vector2.Distance(transform.position, player.position);
+        return distance <= chaseDistance && distance > stoppingDistance;
+    }
+
+    private bool IsPlayerInHorizontalChaseRange()
+    {
+        if (player == null) return false;
+        float xDistance = Mathf.Abs(transform.position.x - player.position.x);
+        return xDistance <= chaseDistance;
     }
 
     private void ChasePlayer()
     {
         if (player == null || anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) return;
 
-        // Crucial fix: Face player FIRST before moving
+        // Face player before moving
         FacePlayer();
 
+        // Only move on X axis, maintain current Y position
         Vector2 targetPosition = new Vector2(player.position.x, transform.position.y);
-        transform.position = Vector2.MoveTowards(
-            transform.position,
-            targetPosition,
-            chaseSpeed * Time.deltaTime
-        );
 
-        anim.SetBool("isMoving", true);
+        // Stop at appropriate distance
+        float xDistance = Mathf.Abs(transform.position.x - player.position.x);
+        if (xDistance > stoppingDistance)
+        {
+            transform.position = Vector2.MoveTowards(
+                transform.position,
+                targetPosition,
+                chaseSpeed * Time.deltaTime
+            );
+            anim.SetBool("isMoving", true);
+        }
+        else
+        {
+            anim.SetBool("isMoving", false);
+        }
     }
 
     private void StartAttack()
@@ -151,7 +220,7 @@ public class EnhancedSkeleton : MonoBehaviour
     {
         yield return new WaitForSeconds(returnPatrolDelay);
 
-        if (!IsPlayerInChaseRange())
+        if (!IsPlayerInHorizontalChaseRange() || !IsPlayerOnSameLevel())
         {
             enemyPatrol.enabled = true;
             isPlayerInCombatRange = false;
@@ -172,7 +241,8 @@ public class EnhancedSkeleton : MonoBehaviour
 
     private void DamagePlayer()
     {
-        if (PlayerInSight())
+        // Apply damage if player is either in front or behind
+        if (PlayerInSight() || PlayerBehind())
         {
             SoundManager.instance.PlaySound(attackSound);
             playerHealth.TakeDamage(damage, transform.position);
@@ -182,9 +252,33 @@ public class EnhancedSkeleton : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
+        // Front attack range
         Gizmos.DrawWireCube(
             boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z)
+        );
+
+        // Rear detection
+        Gizmos.color = Color.magenta;
+        Vector3 backDirection = transform.localScale.x > 0 ? Vector3.left : Vector3.right;
+        Gizmos.DrawWireSphere(
+            transform.position + backDirection * range,
+            0.5f
+        );
+
+        // Horizontal chase range
+        Gizmos.color = Color.yellow;
+        float yPos = transform.position.y;
+        Gizmos.DrawLine(
+            new Vector3(transform.position.x - chaseDistance, yPos, 0),
+            new Vector3(transform.position.x + chaseDistance, yPos, 0)
+        );
+
+        // Vertical tolerance range
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(
+            new Vector3(transform.position.x, yPos - maxVerticalDistance, 0),
+            new Vector3(transform.position.x, yPos + maxVerticalDistance, 0)
         );
     }
 }

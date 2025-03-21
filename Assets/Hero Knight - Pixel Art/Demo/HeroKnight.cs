@@ -29,6 +29,7 @@ public class HeroKnight : MonoBehaviour
     private EnhancedSkeleton _enhancedSkeleton;
     private bool m_isBlocking = false;
     private bool m_isRolling = false;
+    private bool m_isAttacking = false;
     [SerializeField]    private AudioClip attackSound;
     [SerializeField]    private AudioClip jumpSound;
     [SerializeField]    private AudioClip shieldSound;
@@ -89,7 +90,6 @@ public class HeroKnight : MonoBehaviour
 
         // -- Handle input and movement --
         float inputX = Input.GetAxis("Horizontal");
-
         // Swap direction of sprite depending on walk direction
         if (inputX > 0)
         {
@@ -136,13 +136,13 @@ public class HeroKnight : MonoBehaviour
 
             // Reset timer
             m_timeSinceAttack = 0.0f;
+
             Attack();
         }
 
         // Block
         else if (Input.GetMouseButtonDown(1) && !m_rolling)
         {
-       
             m_animator.SetTrigger("Block");
             m_animator.SetBool("IdleBlock", true);
             SoundManager.instance.PlaySound(shieldSound);

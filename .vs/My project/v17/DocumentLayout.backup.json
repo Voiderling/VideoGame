@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\home\\desktop\\pcto\\my project\\assets\\boss_run.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\boss_run.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\home\\desktop\\pcto\\my project\\assets\\enemies\\scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemies\\scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\home\\desktop\\pcto\\my project\\assets\\scripts\\expstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\expstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\Home\\Desktop\\PCTO\\My project\\assets\\enemies\\scripts\\enemypatrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemies\\scripts\\enemypatrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|c:\\users\\home\\desktop\\pcto\\my project\\assets\\enemies\\scripts\\enhancedskeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|C:\\Users\\Home\\Desktop\\PCTO\\My project\\assets\\enemies\\scripts\\enhancedskeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32C3BDE6-E125-3128-82C1-25D0441455A3}|Assembly-CSharp.csproj|solutionrelative:assets\\enemies\\scripts\\enhancedskeleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -106,11 +118,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "HeroKnight.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Hero Knight - Pixel Art\\Demo\\HeroKnight.cs",
               "RelativeDocumentMoniker": "Assets\\Hero Knight - Pixel Art\\Demo\\HeroKnight.cs",
@@ -123,7 +135,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Boss_Run.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Boss_Run.cs",
+              "RelativeDocumentMoniker": "Assets\\Boss_Run.cs",
+              "ToolTip": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Boss_Run.cs",
+              "RelativeToolTip": "Assets\\Boss_Run.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T21:25:07.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Boss.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Enemies\\Scripts\\Boss.cs",
+              "RelativeDocumentMoniker": "Assets\\Enemies\\Scripts\\Boss.cs",
+              "ToolTip": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Enemies\\Scripts\\Boss.cs",
+              "RelativeToolTip": "Assets\\Enemies\\Scripts\\Boss.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T22:49:29.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpStats.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\ExpStats.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ExpStats.cs",
+              "ToolTip": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\ExpStats.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ExpStats.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T12:46:23.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "LevelsManager.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\LevelsManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LevelsManager.cs",
@@ -135,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "RespawnText.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\RespawnText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\RespawnText.cs",
@@ -147,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Dialogue.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\Dialogue.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Dialogue.cs",
@@ -159,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\Menu\\MenuManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menu\\MenuManager.cs",
@@ -171,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PlayerRespawn.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\PlayerRespawn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerRespawn.cs",
@@ -183,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EnhancedSkeleton.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Enemies\\Scripts\\EnhancedSkeleton.cs",
               "RelativeDocumentMoniker": "Assets\\Enemies\\Scripts\\EnhancedSkeleton.cs",
@@ -191,12 +242,11 @@
               "RelativeToolTip": "Assets\\Enemies\\Scripts\\EnhancedSkeleton.cs",
               "ViewState": "AgIAAA8BAAAAAAAAAAAgwJAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T19:47:42.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T19:47:42.04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "EnemyPatrol.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Enemies\\Scripts\\EnemyPatrol.cs",
               "RelativeDocumentMoniker": "Assets\\Enemies\\Scripts\\EnemyPatrol.cs",
@@ -204,12 +254,11 @@
               "RelativeToolTip": "Assets\\Enemies\\Scripts\\EnemyPatrol.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAkwCUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T10:55:05.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-09T10:55:05.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "EnemyHealth.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Enemies\\Scripts\\EnemyHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Enemies\\Scripts\\EnemyHealth.cs",
@@ -221,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EnemyHealthBar.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\EnemyHealthBar.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyHealthBar.cs",
@@ -233,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "SoundManager.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\SoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SoundManager.cs",
@@ -245,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "VolumeText.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\VolumeText.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\VolumeText.cs",
@@ -257,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ScrollScript.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\ScrollScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScrollScript.cs",
@@ -269,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "DoorExitScirpt.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\DoorExitScirpt.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DoorExitScirpt.cs",
@@ -281,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "MenuSoundManager.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\Menu\\MenuSoundManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menu\\MenuSoundManager.cs",
@@ -293,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "UiManager.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\UiManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UiManager.cs",
@@ -305,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "ScrollManager.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\ScrollManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ScrollManager.cs",
@@ -317,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Text.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Library\\PackageCache\\com.unity.ugui\\Runtime\\UGUI\\UI\\Core\\Text.cs",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui\\Runtime\\UGUI\\UI\\Core\\Text.cs",
@@ -329,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "HowToPlayScript.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\HowToPlayScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HowToPlayScript.cs",
@@ -341,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "SwordSelect.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\SwordSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SwordSelect.cs",
@@ -353,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "MenuSwordSelect.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\UI\\Menu\\MenuSwordSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Menu\\MenuSwordSelect.cs",
@@ -365,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "HelthCollectable.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\HelthCollectable.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\HelthCollectable.cs",
@@ -377,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Health.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Health.cs",
@@ -389,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "MenuSwordSelect.cs",
               "DocumentMoniker": "C:\\Users\\Home\\Desktop\\PCTO\\My project\\Assets\\Scripts\\MenuSwordSelect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuSwordSelect.cs",

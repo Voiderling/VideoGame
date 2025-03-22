@@ -22,9 +22,9 @@ public class Health : MonoBehaviour
     [Header("Components")]
     [SerializeField] private Behaviour[] components;
     private Vector3 checkpointPosition;
-
     private void Awake()
     {
+
         knight = GetComponent<HeroKnight>();
         currentHealth = startingHealth;
         anim = GetComponent<Animator>();

@@ -62,11 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
+    <Compile Include="Assets\Enemies\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\UI\SwordSelect.cs" />
     <Compile Include="Assets\Enemies\Scripts\EnemyPatrol.cs" />
     <Compile Include="Assets\Scripts\EnemyHealthBar.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\FollowTarget.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\HeroKnight.cs" />
+    <Compile Include="Assets\Enemies\Scripts\BossHealth.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuSwordSelect.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\ParallaxCamera.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\Scripts\HeroKnightDealDamage.cs" />
     <Compile Include="Assets\Scripts\UI\Menu\MenuSoundManager.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
+    <Compile Include="Assets\Boss_Run.cs" />
     <Compile Include="Assets\Enemies\Scripts\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
@@ -106,8 +109,10 @@
     <Compile Include="Assets\Scripts\HelthCollectable.cs" />
     <Compile Include="Assets\Scripts\UI\RespawnText.cs" />
     <Compile Include="Assets\Scripts\XP\ExperienceManager.cs" />
+    <Compile Include="Assets\Enemies\Scripts\BossWeapon.cs" />
     <Compile Include="Assets\Scripts\UI\VolumeText.cs" />
     <Compile Include="Assets\Scripts\ParallaxLayer.cs" />
+    <Compile Include="Assets\ArtifactScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

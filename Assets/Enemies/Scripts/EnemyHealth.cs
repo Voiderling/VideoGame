@@ -16,6 +16,8 @@ public class EnemyHealth : MonoBehaviour
     [Header("Enemy Hurt")]
     [SerializeField] private AudioClip enemyHurtSound;
     EnhancedSkeleton enemy;
+    [SerializeField] private bool isBoss = false;
+    private bool isEnraged;
 
     private void Awake()
     {
@@ -36,6 +38,11 @@ public class EnemyHealth : MonoBehaviour
         if (anim != null)
         {
             healthBar.updateHealthBar(currentHealth, maxHealth);
+            if(currentHealth > 0 && isBoss)
+            {
+
+                currentHealth -= damage;
+            }
             if (currentHealth > 0)
             {
                 currentHealth -= damage;
@@ -43,10 +50,14 @@ public class EnemyHealth : MonoBehaviour
                 Debug.Log(currentHealth);
                 SoundManager.instance.PlaySound(enemyHurtSound);
                 hurt = true;
-            }
+            }            
             else if (currentHealth <= 0)
             {
                 Die();
+            }
+            if ((currentHealth < maxHealth * 0.5f) && isBoss) {
+                anim.SetTrigger("IsEnraged");
+                isEnraged = true;
             }
         }
     }
@@ -54,7 +65,13 @@ public class EnemyHealth : MonoBehaviour
 
     public void Die()
     {
-        if (!dead)
+        if(!dead && isBoss)
+        {
+            dead = true;
+            anim.SetTrigger("death");
+            Destroy(gameObject,3f);
+        }
+        else if (!dead)
         {
             anim.SetTrigger("death");
             SoundManager.instance.PlaySound(dieEnemySound);
@@ -95,5 +112,8 @@ public class EnemyHealth : MonoBehaviour
     public void DisableHurt()
     {
         hurt = false;
+    }
+    public bool GetIsEnraged() {
+        return isEnraged;
     }
 }

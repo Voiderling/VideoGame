@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Checkpoint
+  - XPUI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Decorations
   - Water
   - UI
   - Ground
@@ -19,7 +20,7 @@ TagManager:
   - Platform
   - Scroll
   - Sensors
-  - 
+  - EnemySideways
   - 
   - 
   - 

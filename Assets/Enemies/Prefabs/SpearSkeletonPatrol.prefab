@@ -543,11 +543,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922760743883852331, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
       propertyPath: chaseSpeed
-      value: 3
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922760743883852331, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b543a79abd60dc4e8424b343bf52b8c, type: 3}
+    - target: {fileID: 1922760743883852331, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: enableChase
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1922760743883852331, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
       propertyPath: chaseDistance
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1922760743883852331, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
       propertyPath: returnPatrolDelay
@@ -592,6 +600,26 @@ PrefabInstance:
     - target: {fileID: 2224220166470547671, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
       propertyPath: maxHealth
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854177325937147228, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372461934875629397, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372461934875629397, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372461934875629397, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: m_LinearDamping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372461934875629397, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6954335755412693466, guid: 94ac992fb77d9a44bb1439e2a8b38133, type: 3}
       propertyPath: m_Points.Array.data[0].x

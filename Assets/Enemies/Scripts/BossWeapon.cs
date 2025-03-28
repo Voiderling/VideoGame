@@ -8,6 +8,7 @@ public class BossWeapon : MonoBehaviour
     [SerializeField] private Vector3 attackOffset;
     [SerializeField] private float attackRange = 3f;
     [SerializeField] private LayerMask attackMask;
+    [SerializeField] private AudioClip attackSound;
     public void Attack()
     {
         Vector3 pos = transform.position;
@@ -20,6 +21,7 @@ public class BossWeapon : MonoBehaviour
             Health health = colInfo.GetComponent<Health>();
             if (health != null)
             {
+                SoundManager.instance.PlaySound(attackSound);
                 health.TakeDamage(attackDamage, transform.position);
             }
             else
@@ -27,10 +29,6 @@ public class BossWeapon : MonoBehaviour
                 Debug.LogWarning("Hit object without Health component: " + colInfo.name);
             }
         }
-    }
-    public void EnragedAttack()
-    {
-
     }
     void Start()
     {

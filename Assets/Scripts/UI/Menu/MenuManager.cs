@@ -47,10 +47,24 @@ public class MenuManager : MonoBehaviour
     {
         MenuSoundManager.instance.PlaySound(interactSound);
         if (isTutorial) currentPosition = 10;
-        if (currentPosition == 0)
+
+        if (currentPosition == 0) // New Game
         {
-            //Start game
-            SceneManager.LoadScene(PlayerPrefs.GetInt("level", 2));
+            // Only reset if XPManager exists
+            if (XPManager.Instance != null)
+            {
+                XPManager.Instance.ResetProgression();
+            }
+            else
+            {
+                // First-time initialization
+                PlayerPrefs.DeleteKey("CurrentLevel");
+                PlayerPrefs.DeleteKey("CurrentXP");
+                PlayerPrefs.DeleteKey("TargetXP");
+            }
+
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(2); // Load first level directly
         }
         else if (currentPosition == 1)
         {
@@ -59,19 +73,23 @@ public class MenuManager : MonoBehaviour
         else if (currentPosition == 2)
         {
             MenuSoundManager.instance.ChangeMusicVolume(0.2f);
-            //Open Credits
         }
         else if (currentPosition == 3)
         {
-            SceneManager.LoadScene(PlayerPrefs.GetInt("HowToPlay", 1));
+            SceneManager.LoadScene(1); // HowToPlay directly
         }
         else if (currentPosition == 4)
         {
-            UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
-        } else if (currentPosition == 10)
+        }
+        else if (currentPosition == 10) // Return to Main Menu
         {
-            SceneManager.LoadScene(PlayerPrefs.GetInt("MainMenu", 0));
+            if (XPManager.Instance != null)
+            {
+                XPManager.Instance.ResetProgression();
+                Destroy(XPManager.Instance.gameObject);
+            }
+            SceneManager.LoadScene(0); // Main menu directly
         }
     }
 }

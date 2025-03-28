@@ -10,7 +10,7 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private TMP_Text speakerText;
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private Image portraitImage;
-
+    [SerializeField] private int nextLevel;
     [SerializeField] private string[] speaker;
     [TextArea]
     [SerializeField] private string[] dialogueWords;
@@ -53,7 +53,7 @@ public class Dialogue : MonoBehaviour
             step = 0;
             inConversation = false;
             StartCoroutine(changeScene());
-            SceneManager.LoadScene(PlayerPrefs.GetInt("level3", 4));
+            SceneManager.LoadScene(PlayerPrefs.GetInt("level3", nextLevel));
         }
 
         // Show current line

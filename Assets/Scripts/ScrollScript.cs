@@ -4,8 +4,9 @@ public class ScrollScript : MonoBehaviour
 {
     [SerializeField] private GameObject trigger;
     [SerializeField] private GameObject scrollCanvas;
+    [SerializeField] private GameObject triggerObject;
     private bool isInRange;
-
+    private int count;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -26,7 +27,8 @@ public class ScrollScript : MonoBehaviour
 
     private void Update()
     {
-        if (isInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Escape)))
+
+        if (isInRange && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)))
         {
             ToggleScrollCanvas();
         }
@@ -37,5 +39,12 @@ public class ScrollScript : MonoBehaviour
         bool shouldActivate = !scrollCanvas.activeSelf;
         scrollCanvas.SetActive(shouldActivate);
         Time.timeScale = shouldActivate ? 0f : 1f;
+        count++;
+        if (count > 1)
+        {
+            Time.timeScale = 1f;
+            triggerObject.SetActive(false);
+            return;
+        }
     }
 }

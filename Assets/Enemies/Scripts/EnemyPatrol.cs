@@ -32,25 +32,26 @@ public class EnemyPatrool : MonoBehaviour
     private void Update()
     {
 
-        if (enemy == null)
+        if (anim != null)
         {
-            // Optionally disable the script if the enemy has been destroyed.
+            if (movingLeft)
+            {
+                if (enemy.position.x >= leftEdge.position.x)
+                    MoveInDirection(-1);
+                else
+                    DirectionChange();
+            }
+            else
+            {
+                if (enemy.position.x <= rightEdge.position.x)
+                    MoveInDirection(1);
+                else
+                    DirectionChange();
+            }
+        } else
+        {
             enabled = false;
             return;
-        }
-        if (movingLeft)
-        {
-            if (enemy.position.x >= leftEdge.position.x)
-                MoveInDirection(-1);
-            else
-                DirectionChange();
-        }
-        else
-        {
-            if (enemy.position.x <= rightEdge.position.x)
-                MoveInDirection(1);
-            else
-                DirectionChange();
         }
     }
     private void DirectionChange()

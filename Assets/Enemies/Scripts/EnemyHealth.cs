@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
@@ -18,15 +19,23 @@ public class EnemyHealth : MonoBehaviour
     EnhancedSkeleton enemy;
     [SerializeField] private bool isBoss = false;
     private bool isEnraged;
-
+    private XPManager xp;
     private void Awake()
     {
         patrol = GetComponent<EnemyPatrool>();
         anim = GetComponent<Animator>();
         enemy = GetComponent<EnhancedSkeleton>();
         healthBar = GetComponentInChildren<EnemyHealthBar>();
+        xp = GetComponent<XPManager>();
     }
- 
+    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        Debug.Log("Scene loaded. Death counter reset.");
+    }
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
     void Start()
     {
         currentHealth = maxHealth;
@@ -69,10 +78,13 @@ public class EnemyHealth : MonoBehaviour
         {
             dead = true;
             anim.SetTrigger("death");
+            SoundManager.instance.PlaySound(dieEnemySound);
+
             Destroy(gameObject,3f);
         }
         else if (!dead)
         {
+            XPManager.Instance.AddXP(15);
             anim.SetTrigger("death");
             SoundManager.instance.PlaySound(dieEnemySound);
             Debug.Log("Enemy died");

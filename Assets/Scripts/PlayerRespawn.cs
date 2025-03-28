@@ -47,4 +47,5 @@ public class PlayerRespawn : MonoBehaviour
     {
         return maxDeaths - deathCounter;
     }
+    public void IncreaseMaxDeaths(int amount) => maxDeaths += amount;
 }

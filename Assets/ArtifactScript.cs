@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ArtifactScript : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class ArtifactScript : MonoBehaviour
             // Collect artifact when pressing E
             if (isInRange && Input.GetKeyDown(KeyCode.E))
             {
+                SceneManager.LoadScene(PlayerPrefs.GetInt("Salvation", 7));
                 artifactVisual.SetActive(false);
                 textTrigger?.SetActive(false);
             }

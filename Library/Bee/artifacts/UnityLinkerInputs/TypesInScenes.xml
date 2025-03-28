@@ -1,9 +1,34 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ArtifactScript" preserve="nothing"/>
+		<type fullname="Boss" preserve="nothing"/>
+		<type fullname="Boss_Run" preserve="nothing"/>
+		<type fullname="BossWeapon" preserve="nothing"/>
 		<type fullname="DestroyEvent_HeroKnight" preserve="nothing"/>
+		<type fullname="Dialogue" preserve="nothing"/>
+		<type fullname="DoorExitScirpt" preserve="nothing"/>
+		<type fullname="EnemyHealth" preserve="nothing"/>
+		<type fullname="EnemyHealthBar" preserve="nothing"/>
+		<type fullname="EnemyPatrool" preserve="nothing"/>
+		<type fullname="EnhancedSkeleton" preserve="nothing"/>
+		<type fullname="Health" preserve="nothing"/>
+		<type fullname="Healthbar" preserve="nothing"/>
+		<type fullname="HelthCollectable" preserve="nothing"/>
 		<type fullname="HeroKnight" preserve="nothing"/>
+		<type fullname="MenuManager" preserve="nothing"/>
+		<type fullname="MenuSoundManager" preserve="nothing"/>
+		<type fullname="NewMonoBehaviourScript" preserve="nothing"/>
+		<type fullname="ParallaxBackground" preserve="nothing"/>
+		<type fullname="ParallaxCamera" preserve="nothing"/>
+		<type fullname="ParallaxLayer" preserve="nothing"/>
+		<type fullname="PlayerRespawn" preserve="nothing"/>
+		<type fullname="RespawnText" preserve="nothing"/>
+		<type fullname="ScrollManager" preserve="nothing"/>
+		<type fullname="ScrollScript" preserve="nothing"/>
 		<type fullname="Sensor_HeroKnight" preserve="nothing"/>
-		<type fullname="SkeletonBehaviour" preserve="nothing"/>
+		<type fullname="SoundManager" preserve="nothing"/>
+		<type fullname="UiManager" preserve="nothing"/>
+		<type fullname="VolumeText" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.2D.Animation.Runtime">
 		<type fullname="UnityEngine.U2D.Animation.BufferManager" preserve="nothing"/>
@@ -13,13 +38,16 @@
 	<assembly fullname="Unity.Cinemachine">
 		<type fullname="Unity.Cinemachine.CinemachineBrain" preserve="nothing"/>
 		<type fullname="Unity.Cinemachine.CinemachineCamera" preserve="nothing"/>
+		<type fullname="Unity.Cinemachine.CinemachineConfiner2D" preserve="nothing"/>
 		<type fullname="Unity.Cinemachine.CinemachineFollow" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.InputSystem">
 		<type fullname="UnityEngine.InputSystem.InputActionAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.InputSystem.InputActionReference" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.InputSystemObject" preserve="nothing"/>
 		<type fullname="UnityEngine.InputSystem.RemoteInputPlayerConnection" preserve="nothing"/>
+		<type fullname="UnityEngine.InputSystem.UI.InputSystemUIInputModule" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.ProbeVolumesOptions" preserve="nothing"/>
@@ -55,6 +83,7 @@
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVector3" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVector4" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.UIFoldout" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.Volume" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.VolumeProfile" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Universal.2D.Runtime">
@@ -85,6 +114,13 @@
 		<type fullname="UnityEngine.Rendering.Universal.Vignette" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.Universal.WhiteBalance" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.TextMeshPro">
+		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
+		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
+		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="UnityEngine">
 		<type fullname="UnityEditor.Animations.AnimatorController" preserve="nothing"/>
 		<type fullname="UnityEditor.AudioManager" preserve="nothing"/>
@@ -98,8 +134,11 @@
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
 		<type fullname="UnityEngine.AnimationClip" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
+		<type fullname="UnityEngine.Audio.AudioResource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
@@ -108,8 +147,10 @@
 		<type fullname="UnityEngine.CircleCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
-		<type fullname="UnityEngine.CompositeCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
+		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
+		<type fullname="UnityEngine.EdgeCollider2D" preserve="nothing"/>
+		<type fullname="UnityEngine.Effector2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Font" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
 		<type fullname="UnityEngine.Grid" preserve="nothing"/>
@@ -119,6 +160,9 @@
 		<type fullname="UnityEngine.MonoBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.Motion" preserve="nothing"/>
 		<type fullname="UnityEngine.Object" preserve="nothing"/>
+		<type fullname="UnityEngine.PhysicsMaterial2D" preserve="nothing"/>
+		<type fullname="UnityEngine.PlatformEffector2D" preserve="nothing"/>
+		<type fullname="UnityEngine.PolygonCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.QualitySettings" preserve="nothing"/>
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
 		<type fullname="UnityEngine.Renderer" preserve="nothing"/>
@@ -133,7 +177,6 @@
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Tilemaps.Tilemap" preserve="nothing"/>
-		<type fullname="UnityEngine.Tilemaps.TilemapCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Tilemaps.TilemapRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 	</assembly>
@@ -141,6 +184,7 @@
 		<type fullname="UnityEngine.Tilemaps.Tile" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine.UI">
+		<type fullname="UnityEngine.EventSystems.EventSystem" preserve="nothing"/>
 		<type fullname="UnityEngine.EventSystems.EventTrigger" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
@@ -150,8 +194,11 @@
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Outline" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Shadow" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Slider" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Toggle" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="nothing"/>

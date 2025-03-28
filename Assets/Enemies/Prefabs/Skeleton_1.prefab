@@ -161,8 +161,9 @@ MonoBehaviour:
     m_Bits: 128
   enableChase: 0
   chaseSpeed: 4
-  chaseDistance: 10
+  chaseDistance: 7
   stoppingDistance: 2
+  maxVerticalDistance: 1
   attackSound: {fileID: 8300000, guid: c971aa045894981449b4bf1b2baf6f4a, type: 3}
   returnPatrolDelay: 2
 --- !u!95 &8185915637178435377
@@ -201,8 +202,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
+  healthBar: {fileID: 0}
   dieEnemySound: {fileID: 8300000, guid: 4ce62a9e0b3a27a4dadddd26428c6868, type: 3}
   enemyHurtSound: {fileID: 8300000, guid: da86fedbc4f81464b987b78c2e55364e, type: 3}
+  isBoss: 0
 --- !u!50 &6372461934875629397
 Rigidbody2D:
   serializedVersion: 5

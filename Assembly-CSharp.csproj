@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\6000.0.31f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\levelStatsUpgrade.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Enemies\Scripts\Boss.cs" />
     <Compile Include="Assets\Scripts\UI\SwordSelect.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Hero Knight - Pixel Art\Demo\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\SimpleNavAgentAnimation.cs" />
     <Compile Include="Assets\Scripts\ScrollChangeScene\ScrollLvl1.cs" />
+    <Compile Include="Assets\Scripts\XPManager.cs" />
     <Compile Include="Assets\Scripts\HeroKnightAttack.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\Movement2D.cs" />
     <Compile Include="Assets\Scripts\InteractionScript.cs" />
@@ -95,13 +97,13 @@
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\DoorExitScirpt.cs" />
+    <Compile Include="Assets\Scripts\SceneTransition.cs" />
     <Compile Include="Assets\Scripts\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\LevelsManager.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\ClickMovement.cs" />
     <Compile Include="Assets\Scripts\UI\UiManager.cs" />
     <Compile Include="Assets\Scripts\ScrollManager.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\DialogueUI.cs" />
-    <Compile Include="Assets\Scripts\ExpStats.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\DialogueManager.cs" />
     <Compile Include="Assets\HeneGames\Dialogue System\Scripts\DialogueCharacter.cs" />
     <Compile Include="Assets\Scripts\PlayerRespawn.cs" />

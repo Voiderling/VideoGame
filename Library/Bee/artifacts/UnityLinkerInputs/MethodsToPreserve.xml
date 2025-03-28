@@ -1,4 +1,40 @@
 <linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="UiManager">
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="MusicVolume"/>
+			<method name="MusicVolume"/>
+			<method name="MusicVolume"/>
+			<method name="MusicVolume"/>
+			<method name="PauseGame"/>
+			<method name="PauseGame"/>
+			<method name="PauseGame"/>
+			<method name="PauseGame"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Restart"/>
+			<method name="Restart"/>
+			<method name="Restart"/>
+			<method name="Restart"/>
+			<method name="SoundVolume"/>
+			<method name="SoundVolume"/>
+			<method name="SoundVolume"/>
+			<method name="SoundVolume"/>
+		</type>
+	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton">
 			<method name="OnAction"/>

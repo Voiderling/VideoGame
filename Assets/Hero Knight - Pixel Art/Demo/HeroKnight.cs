@@ -117,7 +117,7 @@ public class HeroKnight : MonoBehaviour
 
         //Death
         //Attack
-        if (Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling)
+        if (Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f && !m_rolling && !IsBlocking())
         {
             
             SoundManager.instance.PlaySound(attackSound);
@@ -240,7 +240,7 @@ public class HeroKnight : MonoBehaviour
     [Header("Attack Settings")]
     [SerializeField] private Transform attackPoint;  // Set this in the Inspector.
     [SerializeField] private float attackRange = 0.5f;
-    [SerializeField] private int attackDamage = 1;
+    [SerializeField] private float attackDamage = 1;
     [SerializeField] private LayerMask enemyLayers;    // Make sure enemy GameObjects are on this layer.
     // Call this method from an animation event at the exact frame you want the attack to hit.
     private Vector3 drawGizmos;
@@ -271,4 +271,6 @@ public class HeroKnight : MonoBehaviour
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+    public void IncreaseAttackDamage(float amount) => attackDamage += amount;
+    public void IncreaseMoveSpeed(float amount) => m_speed += amount;
 }

@@ -114,4 +114,5 @@ public class Health : MonoBehaviour
         GetComponent<Collider2D>().enabled = true;
         spriteRend.enabled = true;
     }
+    public void IncreaseMaxHealth(float amount) => startingHealth += amount;
 }
